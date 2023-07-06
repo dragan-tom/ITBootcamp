@@ -1,0 +1,29 @@
+-- Domaci zadatak 5 (nastavak od juce po rednom broju):
+-- Na kojoj adresi zivi zaposleni Jon Stephens
+
+SELECT * FROM staff;
+SELECT * FROM staff WHERE first_name = 'Jon' and last_name = 'Stephens';
+SELECT address_id FROM staff WHERE first_name = 'Jon' and last_name = 'Stephens'; --4
+SELECT * FROM Address;
+SELECT * FROM Address WHERE address_id = 4;
+SELECT * FROM Address WHERE address_id = (SELECT address_id FROM staff WHERE first_name = 'Jon' and last_name = 'Stephens');
+SELECT address FROM Address WHERE address_id = (SELECT address_id FROM staff WHERE first_name = 'Jon' and last_name = 'Stephens');
+
+-- Domaci zadatak 6:
+-- Pronaci filmove u kojima glumi Zero Cage
+
+SELECT * FROM actor;
+SELECT * FROM actor WHERE first_name = 'Zero' AND last_name = 'Cage';
+SELECT actor_id FROM actor WHERE first_name = 'Zero' AND last_name = 'Cage'; -- 11
+SELECT * FROM film_actor;
+SELECT * FROM film_actor WHERE actor_id = 11;
+SELECT * FROM film_actor WHERE actor_id = (SELECT actor_id FROM actor WHERE first_name = 'Zero' AND last_name = 'Cage');
+SELECT film_id FROM film_actor WHERE actor_id = (SELECT actor_id FROM actor WHERE first_name = 'Zero' AND last_name = 'Cage'); -- 118, 205, 281, ...
+SELECT * FROM film;
+SELECT * FROM film WHERE film_id IN (118, 205, 281);
+SELECT * FROM film WHERE film_id IN (SELECT film_id FROM film_actor WHERE actor_id = (SELECT actor_id FROM actor WHERE first_name = 'Zero' AND last_name = 'Cage'));
+SELECT title FROM film WHERE film_id IN (SELECT film_id FROM film_actor WHERE actor_id = (SELECT actor_id FROM actor WHERE first_name = 'Zero' AND last_name = 'Cage'));
+
+-- Domaci zadatak 7 (SAMO ZA VEZBU):
+-- Koje filmove je iznajmila Olga Jimenez 
+Nisam uspeo da resim. Jos...

@@ -1,0 +1,44 @@
+Sreda domaci
+
+Zadatak 1:
+Prikazati sve filmove koji se rade o zenama (malo za razmisliti)
+
+SELECT * from film;
+SELECT * from film WHERE description ILIKE '%Woman%' OR description ILIKE '%Women%';
+SELECT title from film WHERE description ILIKE '%Woman%' OR description ILIKE '%Women%';
+
+Zadatak 2:
+Prikazati sve kupce koji imaju ID izmedju 200 i 300
+
+SELECT * FROM customer;
+SELECT * FROM customer WHERE customer_id BETWEEN 200 AND 300;
+SELECT first_name, last_name FROM customer WHERE customer_id BETWEEN 200 AND 300;
+
+Zadatak 3:
+Koji prodavac (staff_id) je prodao vise filmova (tabela payment)?
+
+SELECT * FROM payment;
+SELECT count(*) FROM payment WHERE staff_id = 1;
+Rezultat = 7292
+
+SELECT * FROM payment;
+SELECT count(*) FROM payment WHERE staff_id = 2;
+Rezultat = 7304
+
+Prodavac broj 2 je prodao vise filmova.
+
+
+Zadatak 4:
+Da li je prodavac prodao vise filmova napravio veci profit od prodavca koji je prodao manje filmova?
+
+SELECT * FROM payment;
+SELECT * FROM payment WHERE staff_id = 1;
+SELECT sum(amount) FROM payment WHERE staff_id = 1;
+Rezultat = 30252.12
+
+SELECT * FROM payment;
+SELECT * FROM payment WHERE staff_id = 2;
+SELECT sum(amount) FROM payment WHERE staff_id = 2;
+Rezultat = 31059.92
+
+Da, prodavac broj 2 je napravio veci promet.

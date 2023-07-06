@@ -1,0 +1,1 @@
+Prethodni Domaci 1 (Sa Herokuapp) odraditi log-in koristeci POM (bez Excel file).

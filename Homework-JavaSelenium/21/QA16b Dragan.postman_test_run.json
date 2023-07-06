@@ -1,0 +1,332 @@
+{
+	"id": "9f1bbbdf-378d-4cce-ab8b-2ff9bbc2e61e",
+	"name": "QA16b Dragan",
+	"timestamp": "2023-06-18T14:32:44.986Z",
+	"collection_id": "28014956-4001b59c-5481-442f-8daf-34d7ec3d9669",
+	"folder_id": "28014956-d50f9f96-836f-41a3-b8bd-a26586ac0e5d",
+	"environment_id": "28014956-8339e0fd-c0f2-4db9-ad2b-8f2b010dcbe1",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-18T14:32:42.971Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "d9b75598-4dd6-44fb-9554-97953eb325ed",
+			"name": "Create user success",
+			"url": "https://demoqa.com///",
+			"time": 159,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Status code is 201": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code is 201": false
+				}
+			]
+		},
+		{
+			"id": "38e02a7c-36b4-4884-aedb-0ffa5a6b8d7f",
+			"name": "Create user fail",
+			"url": "https://demoqa.com/Account/v1/User/",
+			"time": 89,
+			"responseCode": {
+				"code": 406,
+				"name": "Not Acceptable"
+			},
+			"tests": {
+				"Status code is 406": true
+			},
+			"testPassFailCounts": {
+				"Status code is 406": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				89
+			],
+			"allTests": [
+				{
+					"Status code is 406": true
+				}
+			]
+		},
+		{
+			"id": "676be81c-ac4f-427b-89ba-abc4eca8222a",
+			"name": "Get token",
+			"url": "https://demoqa.com/Account/v1/GenerateToken",
+			"time": 229,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				229
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "babd1f7c-4252-4f17-9ee9-0d61b253ea95",
+			"name": "Get user",
+			"url": "https://demoqa.com/Account/v1/User/null",
+			"time": 47,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "4576e228-a084-4069-8295-d36a1c2a2df7",
+			"name": "Get books",
+			"url": "https://demoqa.com/BookStore/v1/Books",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b1d88a3b-5506-44f5-9f7c-7a6401bbd94a",
+			"name": "Add a book",
+			"url": "https://demoqa.com/BookStore/v1/Books",
+			"time": 44,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 201": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 201": false
+				}
+			]
+		},
+		{
+			"id": "2c5be965-33b4-4d2c-99d0-cedbfc80db58",
+			"name": "Replace book",
+			"url": "https://demoqa.com/BookStore/v1/Books/9781449325862",
+			"time": 49,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "afa0e8e0-14e5-4090-b7be-f64a211bfa9a",
+			"name": "Get book",
+			"url": "https://demoqa.com/BookStore/v1/Book?ISBN=9781449325862",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "11709315-a1ae-41f2-a31e-ebc13f52a416",
+			"name": "Delete book",
+			"url": "https://demoqa.com/BookStore/v1/Book",
+			"time": 48,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 204": false
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 204": false
+				}
+			]
+		},
+		{
+			"id": "12dfffcc-367f-45d9-8a1e-cffcf31e4ed8",
+			"name": "Delete books",
+			"url": "https://demoqa.com/BookStore/v1/Books?UserId=null",
+			"time": 46,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 204": false
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 204": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 806,
+	"collection": {
+		"requests": [
+			{
+				"id": "d9b75598-4dd6-44fb-9554-97953eb325ed",
+				"method": "POST"
+			},
+			{
+				"id": "38e02a7c-36b4-4884-aedb-0ffa5a6b8d7f",
+				"method": "POST"
+			},
+			{
+				"id": "676be81c-ac4f-427b-89ba-abc4eca8222a",
+				"method": "POST"
+			},
+			{
+				"id": "babd1f7c-4252-4f17-9ee9-0d61b253ea95",
+				"method": "GET"
+			},
+			{
+				"id": "4576e228-a084-4069-8295-d36a1c2a2df7",
+				"method": "GET"
+			},
+			{
+				"id": "b1d88a3b-5506-44f5-9f7c-7a6401bbd94a",
+				"method": "POST"
+			},
+			{
+				"id": "2c5be965-33b4-4d2c-99d0-cedbfc80db58",
+				"method": "PUT"
+			},
+			{
+				"id": "afa0e8e0-14e5-4090-b7be-f64a211bfa9a",
+				"method": "GET"
+			},
+			{
+				"id": "11709315-a1ae-41f2-a31e-ebc13f52a416",
+				"method": "DELETE"
+			},
+			{
+				"id": "12dfffcc-367f-45d9-8a1e-cffcf31e4ed8",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,23 @@
+-- Domaci 1:
+-- Prikazati adrese iz tabele address koje pocinju sa brojem 9
+SELECT * FROM address;
+SELECT * FROM address WHERE address LIKE '9%';
+SELECT address FROM address WHERE address LIKE '9%';
+
+-- Domaci 2:
+-- Prikazati koji id ima Nemacki jezik u tabeli language
+SELECT * FROM language;
+SELECT * FROM language WHERE name = 'German';
+SELECT language_id FROM language WHERE name = 'German';
+
+-- Domaci 3:
+-- Prikazati koje kategorije pocinju na "D", a zavrsavaju na "a" u tabeli category
+SELECT * FROM category;
+SELECT * FROM category WHERE name LIKE 'D%a';
+SELECT name FROM category WHERE name LIKE 'D%a';
+
+-- Domaci 4:
+-- Prikazati svaki payment_id od korisnika 377 iz tabele payment
+SELECT * FROM payment;
+SELECT * FROM payment WHERE customer_id = 377;
+SELECT payment_id FROM payment WHERE customer_id = 377;

@@ -1,0 +1,41 @@
+package sedmicaV.sreda.Domaci2;
+
+import java.util.ArrayList;
+
+public class Automobil extends MotornoVozilo{
+
+    public Automobil(ArrayList<Tocak> tockovi, int cenaVozila, int godinaProizvodnje, int brojTockova) {
+        super(tockovi, cenaVozila, godinaProizvodnje, brojTockova);
+    }
+
+    public Automobil() {
+    }
+
+    @Override
+    public void daLiJeOstecen() {
+        for (int i = 0; i < getTockovi().size(); i++)
+            if (getTockovi().get(i).getTrajanjeGume() > 365)
+                getTockovi().get(i).setOstecenje(true);
+    }
+
+
+
+    @Override
+    public void removeOstecenu() {
+        for (int i = getTockovi().size(); i >= 0; i--) {
+            if (getTockovi().get(i).getTrajanjeGume() > 365)
+                getTockovi().remove(i);
+        }
+    }
+
+    @Override
+    public void ubaciRezervnu(ArrayList<Tocak> rezervniTockovi) {
+        int indexRezervnihTockova = 0;
+        for (int i = 0; i < getBrojTockova() - getTockovi().size(); i++) {
+            getTockovi().add(rezervniTockovi.get(indexRezervnihTockova));
+            indexRezervnihTockova++;
+        }
+    }
+
+
+}
